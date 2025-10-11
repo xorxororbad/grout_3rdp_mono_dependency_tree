@@ -16,6 +16,10 @@ if [ ! -f "${INIT_SENTINEL}" ]; then
         git remote add upstream git@github.com:nlohmann/json.git > /dev/null 2>&1;
     popd
 
+    pushd "${PRV_PROJECT_ROOT}/mirrors/sdl"
+        git remote add upstream git@github.com:libsdl-org/SDL.git > /dev/null 2>&1;
+    popd
+
 
     touch "${INIT_SENTINEL}"
 fi

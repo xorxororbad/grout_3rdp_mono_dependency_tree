@@ -7,3 +7,6 @@
 [submodule "mirrors/jsoncpp"]
 	path = mirrors/jsoncpp
 	url = git@github.com:xorxororbad/mirror-jsoncpp.git
+[submodule "mirrors/sdl"]
+	path = mirrors/sdl
+	url = git@github.com:xorxororbad/mirror-sdl.git
