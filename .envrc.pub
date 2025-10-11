@@ -1,0 +1,21 @@
+
+INIT_SENTINEL="${PRV_PROJECT_ROOT}/.init.sentinel";
+if [ ! -f "${INIT_SENTINEL}" ]; then
+    echo "Running init.."
+
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/tracy"
+        git remote add upstream git@github.com:xorxororbad/mirror-miniaudio.git > /dev/null 2>&1;
+    popd
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/miniaudio"
+        git remote add upstream git@github.com:mackron/miniaudio.git > /dev/null 2>&1;
+    popd
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/jsoncpp"
+        git remote add upstream git@github.com:nlohmann/json.git > /dev/null 2>&1;
+    popd
+
+
+    touch "${INIT_SENTINEL}"
+fi

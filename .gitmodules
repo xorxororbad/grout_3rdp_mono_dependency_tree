@@ -1,0 +1,9 @@
+[submodule "mirrors/tracy"]
+	path = mirrors/tracy
+	url = git@github.com:xorxororbad/mirror-tracy.git
+[submodule "mirrors/miniaudio"]
+	path = mirrors/miniaudio
+	url = git@github.com:xorxororbad/mirror-miniaudio.git
+[submodule "mirrors/jsoncpp"]
+	path = mirrors/jsoncpp
+	url = git@github.com:xorxororbad/mirror-jsoncpp.git
