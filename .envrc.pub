@@ -1,7 +1,7 @@
 
 INIT_SENTINEL="${PRV_PROJECT_ROOT}/.init.sentinel";
 if [ ! -f "${INIT_SENTINEL}" ]; then
-    echo "Running init.."
+    echo "Running init..";
 
 
     pushd "${PRV_PROJECT_ROOT}/mirrors/tracy"
@@ -20,6 +20,10 @@ if [ ! -f "${INIT_SENTINEL}" ]; then
         git remote add upstream git@github.com:libsdl-org/SDL.git > /dev/null 2>&1;
     popd
 
+    pushd "${PRV_PROJECT_ROOT}/mirrors/sqlite"
+        git remote add upstream git@github.com:sqlite/sqlite.git > /dev/null 2>&1;
+    popd
 
-    touch "${INIT_SENTINEL}"
+
+    touch "${INIT_SENTINEL}";
 fi

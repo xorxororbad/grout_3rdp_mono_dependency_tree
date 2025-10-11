@@ -10,3 +10,6 @@
 [submodule "mirrors/sdl"]
 	path = mirrors/sdl
 	url = git@github.com:xorxororbad/mirror-sdl.git
+[submodule "mirrors/sqlite"]
+	path = mirrors/sqlite
+	url = git@github.com:xorxororbad/mirror-sqlite.git
