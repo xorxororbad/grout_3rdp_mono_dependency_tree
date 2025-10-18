@@ -28,6 +28,10 @@ if [ ! -f "${INIT_SENTINEL}" ]; then
         git remote add upstream git@github.com:google/googletest.git > /dev/null 2>&1;
     popd
 
+    pushd "${PRV_PROJECT_ROOT}/mirrors/googlebenchmark"
+        git remote add upstream git@github.com:google/benchmark.git > /dev/null 2>&1;
+    popd
+
 
     touch "${INIT_SENTINEL}";
 fi

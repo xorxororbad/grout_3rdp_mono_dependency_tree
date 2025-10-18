@@ -16,3 +16,6 @@
 [submodule "mirrors/googletest"]
 	path = mirrors/googletest
 	url = git@github.com:xorxororbad/mirror-googletest.git
+[submodule "mirrors/googlebenchmark"]
+	path = mirrors/googlebenchmark
+	url = git@github.com:xorxororbad/mirror-googlebenchmark.git
