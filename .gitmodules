@@ -22,3 +22,6 @@
 [submodule "mirrors/zstd"]
 	path = mirrors/zstd
 	url = git@github.com:xorxororbad/mirror-zstd.git
+[submodule "mirrors/imgui"]
+	path = mirrors/imgui
+	url = https://github.com/ocornut/imgui.git

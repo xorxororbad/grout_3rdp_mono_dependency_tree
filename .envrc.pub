@@ -36,6 +36,10 @@ if [ ! -f "${INIT_SENTINEL}" ]; then
         git remote add upstream git@github.com:facebook/zstd.git > /dev/null 2>&1;
     popd
 
+    pushd "${PRV_PROJECT_ROOT}/mirrors/imgui"
+        git remote add upstream git@github.com:ocornut/imgui.git > /dev/null 2>&1;
+    popd
+
 
     touch "${INIT_SENTINEL}";
 fi
