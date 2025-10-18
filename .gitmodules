@@ -13,3 +13,6 @@
 [submodule "mirrors/sqlite"]
 	path = mirrors/sqlite
 	url = git@github.com:xorxororbad/mirror-sqlite.git
+[submodule "mirrors/googletest"]
+	path = mirrors/googletest
+	url = git@github.com:xorxororbad/mirror-googletest.git
