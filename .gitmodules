@@ -19,3 +19,6 @@
 [submodule "mirrors/googlebenchmark"]
 	path = mirrors/googlebenchmark
 	url = git@github.com:xorxororbad/mirror-googlebenchmark.git
+[submodule "mirrors/zstd"]
+	path = mirrors/zstd
+	url = git@github.com:xorxororbad/mirror-zstd.git
