@@ -25,3 +25,6 @@
 [submodule "mirrors/imgui"]
 	path = mirrors/imgui
 	url = https://github.com/ocornut/imgui.git
+[submodule "mirrors/libgit2"]
+	path = mirrors/libgit2
+	url = git@github.com:xorxororbad/mirror-libgit2.git
