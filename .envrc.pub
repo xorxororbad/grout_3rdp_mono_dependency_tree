@@ -5,7 +5,7 @@ if [ ! -f "${INIT_SENTINEL}" ]; then
 
 
     pushd "${PRV_PROJECT_ROOT}/mirrors/tracy"
-        git remote add upstream git@github.com:xorxororbad/mirror-miniaudio.git > /dev/null 2>&1;
+        git remote add upstream git@github.com:wolfpld/tracy.git > /dev/null 2>&1;
     popd
 
     pushd "${PRV_PROJECT_ROOT}/mirrors/miniaudio"
