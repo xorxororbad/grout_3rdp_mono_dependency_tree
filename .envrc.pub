@@ -41,7 +41,7 @@ if [ ! -f "${INIT_SENTINEL}" ]; then
     popd
 
     pushd "${PRV_PROJECT_ROOT}/mirrors/libgit2"
-        git remote add upstream git@github.com:xorxororbad/mirror-libgit2.git > /dev/null 2>&1;
+        git remote add upstream git@github.com:libgit2/libgit2.git > /dev/null 2>&1;
     popd
 
 
