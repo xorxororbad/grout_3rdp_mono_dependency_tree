@@ -3,46 +3,587 @@ INIT_SENTINEL="${PRV_PROJECT_ROOT}/.init.sentinel";
 if [ ! -f "${INIT_SENTINEL}" ]; then
     echo "Running init..";
 
-
-    pushd "${PRV_PROJECT_ROOT}/mirrors/tracy"
+    pushd "${PRV_PROJECT_ROOT}/mirrors/tracy" > /dev/null;
         git remote add upstream git@github.com:wolfpld/tracy.git > /dev/null 2>&1;
-    popd
+    popd > /dev/null
 
-    pushd "${PRV_PROJECT_ROOT}/mirrors/miniaudio"
+    pushd "${PRV_PROJECT_ROOT}/mirrors/miniaudio" > /dev/null;
         git remote add upstream git@github.com:mackron/miniaudio.git > /dev/null 2>&1;
-    popd
+    popd > /dev/null;
 
-    pushd "${PRV_PROJECT_ROOT}/mirrors/jsoncpp"
+    pushd "${PRV_PROJECT_ROOT}/mirrors/jsoncpp" > /dev/null;
         git remote add upstream git@github.com:nlohmann/json.git > /dev/null 2>&1;
-    popd
+    popd > /dev/null;
 
-    pushd "${PRV_PROJECT_ROOT}/mirrors/sdl"
+    pushd "${PRV_PROJECT_ROOT}/mirrors/sdl" > /dev/null;
         git remote add upstream git@github.com:libsdl-org/SDL.git > /dev/null 2>&1;
-    popd
+    popd > /dev/null;
 
-    pushd "${PRV_PROJECT_ROOT}/mirrors/sqlite"
+    pushd "${PRV_PROJECT_ROOT}/mirrors/sqlite" > /dev/null;
         git remote add upstream git@github.com:sqlite/sqlite.git > /dev/null 2>&1;
-    popd
+    popd > /dev/null;
 
-    pushd "${PRV_PROJECT_ROOT}/mirrors/googletest"
+    pushd "${PRV_PROJECT_ROOT}/mirrors/googletest" > /dev/null;
         git remote add upstream git@github.com:google/googletest.git > /dev/null 2>&1;
-    popd
+    popd > /dev/null;
 
-    pushd "${PRV_PROJECT_ROOT}/mirrors/googlebenchmark"
+    pushd "${PRV_PROJECT_ROOT}/mirrors/googlebenchmark" > /dev/null;
         git remote add upstream git@github.com:google/benchmark.git > /dev/null 2>&1;
-    popd
+    popd > /dev/null;
 
-    pushd "${PRV_PROJECT_ROOT}/mirrors/zstd"
+    pushd "${PRV_PROJECT_ROOT}/mirrors/zstd" > /dev/null;
         git remote add upstream git@github.com:facebook/zstd.git > /dev/null 2>&1;
-    popd
+    popd > /dev/null;
 
-    pushd "${PRV_PROJECT_ROOT}/mirrors/imgui"
+    pushd "${PRV_PROJECT_ROOT}/mirrors/imgui" > /dev/null;
         git remote add upstream git@github.com:ocornut/imgui.git > /dev/null 2>&1;
-    popd
+    popd > /dev/null;
 
-    pushd "${PRV_PROJECT_ROOT}/mirrors/libgit2"
+    pushd "${PRV_PROJECT_ROOT}/mirrors/libgit2" > /dev/null;
         git remote add upstream git@github.com:libgit2/libgit2.git > /dev/null 2>&1;
-    popd
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost" > /dev/null;
+        git remote add upstream git@github.com:boostorg/boost.git;
+
+        #git config submodule.config --remove-section submodule.config
+
+        git config submodule.accumulators.url git@github.com:xorxororbad/mirror-boost-accumulators.git;
+        git config submodule.asio.url git@github.com:xorxororbad/mirror-boost-asio.git;
+        git config submodule.cmake.url git@github.com:xorxororbad/mirror-boost-cmake.git;
+        git config submodule.array.url git@github.com:xorxororbad/mirror-boost-array.git;
+        git config submodule.hana.url git@github.com:xorxororbad/mirror-boost-hana.git;
+        git config submodule.align.url git@github.com:xorxororbad/mirror-boost-align.git;
+        git config submodule.algorithm.url git@github.com:xorxororbad/mirror-boost-algorithm.git;
+        git config submodule.any.url git@github.com:xorxororbad/mirror-boost-any.git;
+        git config submodule.assert.url git@github.com:xorxororbad/mirror-boost-assert.git;
+        git config submodule.atomic.url git@github.com:xorxororbad/mirror-boost-atomic.git;
+        git config submodule.static_assert.url git@github.com:xorxororbad/mirror-boost-static-assert.git;
+        git config submodule.beast.url git@github.com:xorxororbad/mirror-boost-beast.git;
+        git config submodule.bimap.url git@github.com:xorxororbad/mirror-boost-bimap.git;
+        git config submodule.bind.url git@github.com:xorxororbad/mirror-boost-bind.git;
+        git config submodule.callable_traits.url git@github.com:xorxororbad/mirror-boost-callable-traits.git;
+        git config submodule.chrono.url git@github.com:xorxororbad/mirror-boost-chrono.git;
+        git config submodule.circular_buffer.url git@github.com:xorxororbad/mirror-boost-circular-buffer.git;
+        git config submodule.cobalt.url git@github.com:xorxororbad/mirror-boost-cobalt.git;
+        git config submodule.core.url git@github.com:xorxororbad/mirror-boost-core.git;
+        git config submodule.compat.url git@github.com:xorxororbad/mirror-boost-compat.git;
+        git config submodule.concept_check.url git@github.com:xorxororbad/mirror-boost-concept-check.git;
+        git config submodule.config.url git@github.com:xorxororbad/mirror-boost-config.git;
+        git config submodule.container_hash.url git@github.com:xorxororbad/mirror-boost-container-hash.git;
+        git config submodule.context.url git@github.com:xorxororbad/mirror-boost-context.git;
+        git config submodule.conversion.url git@github.com:xorxororbad/mirror-boost-conversion.git;
+        git config submodule.container.url git@github.com:xorxororbad/mirror-boost-container.git;
+        git config submodule.crc.url git@github.com:xorxororbad/mirror-boost-crc.git;
+        git config submodule.date_time.url git@github.com:xorxororbad/mirror-boost-date-time.git;
+        git config submodule.detail.url git@github.com:xorxororbad/mirror-boost-detail.git;
+        git config submodule.describe.url git@github.com:xorxororbad/mirror-boost-describe.git;
+        git config submodule.dynamic_bitset.url git@github.com:xorxororbad/mirror-boost-dynamic-bitset.git;
+        git config submodule.endian.url git@github.com:xorxororbad/mirror-boost-endian.git;
+        git config submodule.exception.url git@github.com:xorxororbad/mirror-boost-exception.git;
+        git config submodule.foreach.url git@github.com:xorxororbad/mirror-boost-foreach.git;
+        git config submodule.function.url git@github.com:xorxororbad/mirror-boost-function.git;
+        git config submodule.functional.url git@github.com:xorxororbad/mirror-boost-functional.git;
+        git config submodule.function_types.url git@github.com:xorxororbad/mirror-boost-function-types.git;
+        git config submodule.fusion.url git@github.com:xorxororbad/mirror-boost-fusion.git;
+        git config submodule.graph.url git@github.com:xorxororbad/mirror-boost-graph.git;
+        git config submodule.io.url git@github.com:xorxororbad/mirror-boost-io.git;
+        git config submodule.intrusive.url git@github.com:xorxororbad/mirror-boost-intrusive.git;
+        git config submodule.integer.url git@github.com:xorxororbad/mirror-boost-integer.git;
+        git config submodule.iterator.url git@github.com:xorxororbad/mirror-boost-iterator.git;
+        git config submodule.lambda.url git@github.com:xorxororbad/mirror-boost-lambda.git;
+        git config submodule.lockfree.url git@github.com:xorxororbad/mirror-boost-lockfree.git;
+        git config submodule.lexical_cast.url git@github.com:xorxororbad/mirror-boost-lexical-cast.git;
+        git config submodule.math.url git@github.com:xorxororbad/mirror-boost-math.git;
+        git config submodule.move.url git@github.com:xorxororbad/mirror-boost-move.git;
+        git config submodule.mpl.url git@github.com:xorxororbad/mirror-boost-mpl.git;
+        git config submodule.mp11.url git@github.com:xorxororbad/mirror-boost-mp11.git;
+        git config submodule.multi_index.url git@github.com:xorxororbad/mirror-boost-multi-index.git;
+        git config submodule.multiprecision.url git@github.com:xorxororbad/mirror-boost-multiprecision.git;
+        git config submodule.mqtt5.url git@github.com:xorxororbad/mirror-boost-mqtt5.git;
+        git config submodule.numeric_conversion.url git@github.com:xorxororbad/mirror-boost-numeric-conversion.git;
+        git config submodule.optional.url git@github.com:xorxororbad/mirror-boost-optional.git;
+        git config submodule.parameter.url git@github.com:xorxororbad/mirror-boost-parameter.git;
+        git config submodule.phoenix.url git@github.com:xorxororbad/mirror-boost-phoenix.git;
+        git config submodule.pool.url git@github.com:xorxororbad/mirror-boost-pool.git;
+        git config submodule.proto.url git@github.com:xorxororbad/mirror-boost-proto.git;
+        git config submodule.python.url git@github.com:xorxororbad/mirror-boost-python.git;
+        git config submodule.preprocessor.url git@github.com:xorxororbad/mirror-boost-preprocessor.git;
+        git config submodule.predef.url git@github.com:xorxororbad/mirror-boost-predef.git;
+        git config submodule.property_map.url git@github.com:xorxororbad/mirror-boost-property-map.git;
+        git config submodule.property_tree.url git@github.com:xorxororbad/mirror-boost-property-tree.git;
+        git config submodule.random.url git@github.com:xorxororbad/mirror-boost-random.git;
+        git config submodule.ratio.url git@github.com:xorxororbad/mirror-boost-ratio.git;
+        git config submodule.range.url git@github.com:xorxororbad/mirror-boost-range.git;
+        git config submodule.regex.url git@github.com:xorxororbad/mirror-boost-regex.git;
+        git config submodule.serialization.url git@github.com:xorxororbad/mirror-boost-serialization.git;
+        git config submodule.smart_ptr.url git@github.com:xorxororbad/mirror-boost-smart-ptr.git;
+        git config submodule.spirit.url git@github.com:xorxororbad/mirror-boost-spirit.git;
+        git config submodule.stacktrace.url git@github.com:xorxororbad/mirror-boost-stacktrace.git;
+        git config submodule.static_string.url git@github.com:xorxororbad/mirror-boost-static-string.git;
+        git config submodule.system.url git@github.com:xorxororbad/mirror-boost-system.git;
+        git config submodule.thread.url git@github.com:xorxororbad/mirror-boost-thread.git;
+        git config submodule.throw_exception.url git@github.com:xorxororbad/mirror-boost-throw-exception.git;
+        git config submodule.tokenizer.url git@github.com:xorxororbad/mirror-boost-tokenizer.git;
+        git config submodule.tti.url git@github.com:xorxororbad/mirror-boost-tti.git;
+        git config submodule.type_traits.url git@github.com:xorxororbad/mirror-boost-type-traits.git;
+        git config submodule.type_index.url git@github.com:xorxororbad/mirror-boost-type-index.git;
+        git config submodule.typeof.url git@github.com:xorxororbad/mirror-boost-typeof.git;
+        git config submodule.tuple.url git@github.com:xorxororbad/mirror-boost-tuple.git;
+        git config submodule.unordered.url git@github.com:xorxororbad/mirror-boost-unordered.git;
+        git config submodule.utility.url git@github.com:xorxororbad/mirror-boost-utility.git;
+        git config submodule.uuid.url git@github.com:xorxororbad/mirror-boost-uuid.git;
+        git config submodule.variant.url git@github.com:xorxororbad/mirror-boost-variant.git;
+        git config submodule.variant2.url git@github.com:xorxororbad/mirror-boost-variant2.git;
+        git config submodule.winapi.url git@github.com:xorxororbad/mirror-boost-winapi.git;
+        git config submodule.xpressive.url git@github.com:xorxororbad/mirror-boost-xpressive.git;
+
+        git submodule update --init --recursive ./tools/cmake/ \
+                                                ./libs/accumulators \
+                                                ./libs/hana \
+                                                ./libs/config \
+                                                ./libs/array \
+                                                ./libs/assert \
+                                                ./libs/atomic \
+                                                ./libs/static_assert \
+                                                ./libs/asio \
+                                                ./libs/align \
+                                                ./libs/algorithm \
+                                                ./libs/any \
+                                                ./libs/bind \
+                                                ./libs/beast \
+                                                ./libs/bimap \
+                                                ./libs/callable_traits \
+                                                ./libs/chrono \
+                                                ./libs/circular_buffer \
+                                                ./libs/cobalt \
+                                                ./libs/core \
+                                                ./libs/compat \
+                                                ./libs/concept_check \
+                                                ./libs/container_hash \
+                                                ./libs/context \
+                                                ./libs/conversion \
+                                                ./libs/container \
+                                                ./libs/crc \
+                                                ./libs/date_time \
+                                                ./libs/detail \
+                                                ./libs/describe \
+                                                ./libs/dynamic_bitset \
+                                                ./libs/endian \
+                                                ./libs/exception \
+                                                ./libs/foreach \
+                                                ./libs/function \
+                                                ./libs/functional \
+                                                ./libs/function_types \
+                                                ./libs/fusion \
+                                                ./libs/graph \
+                                                ./libs/io \
+                                                ./libs/integer \
+                                                ./libs/intrusive \
+                                                ./libs/iterator \
+                                                ./libs/lambda \
+                                                ./libs/lockfree \
+                                                ./libs/lexical_cast \
+                                                ./libs/math \
+                                                ./libs/move \
+                                                ./libs/mpl \
+                                                ./libs/mp11 \
+                                                ./libs/multi_index \
+                                                ./libs/multiprecision \
+                                                ./libs/mqtt5 \
+                                                ./libs/numeric/conversion \
+                                                ./libs/optional \
+                                                ./libs/parameter \
+                                                ./libs/phoenix \
+                                                ./libs/pool \
+                                                ./libs/proto \
+                                                ./libs/python \
+                                                ./libs/preprocessor \
+                                                ./libs/predef \
+                                                ./libs/property_map \
+                                                ./libs/property_tree \
+                                                ./libs/random \
+                                                ./libs/ratio \
+                                                ./libs/range \
+                                                ./libs/regex \
+                                                ./libs/serialization\
+                                                ./libs/smart_ptr \
+                                                ./libs/spirit \
+                                                ./libs/stacktrace \
+                                                ./libs/static_string \
+                                                ./libs/system \
+                                                ./libs/thread \
+                                                ./libs/throw_exception \
+                                                ./libs/tokenizer \
+                                                ./libs/tti \
+                                                ./libs/type_traits \
+                                                ./libs/type_index \
+                                                ./libs/typeof \
+                                                ./libs/tuple \
+                                                ./libs/unordered \
+                                                ./libs/utility \
+                                                ./libs/uuid \
+                                                ./libs/variant \
+                                                ./libs/variant2 \
+                                                ./libs/winapi \
+                                                ./libs/xpressive;
+
+        git submodule foreach git restore --staged .;
+        git submodule foreach git restore .;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/tools/cmake" > /dev/null;
+        git remote add upstream git@github.com:boostorg/cmake.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/accumulators" > /dev/null;
+        git remote add upstream git@github.com:boostorg/accumulators.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/config" > /dev/null;
+        git remote add upstream git@github.com:boostorg/config.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/asio" > /dev/null;
+        git remote add upstream git@github.com:boostorg/asio.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/array" > /dev/null;
+        git remote add upstream git@github.com:boostorg/array.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/foreach" > /dev/null;
+        git remote add upstream git@github.com:boostorg/foreach.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/functional" > /dev/null;
+        git remote add upstream git@github.com:boostorg/functional.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/function" > /dev/null;
+        git remote add upstream git@github.com:boostorg/function.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/function_types" > /dev/null;
+        git remote add upstream git@github.com:boostorg/function_types.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/fusion" > /dev/null;
+        git remote add upstream git@github.com:boostorg/fusion.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/graph" > /dev/null;
+        git remote add upstream git@github.com:boostorg/graph.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/hana" > /dev/null;
+        git remote add upstream git@github.com:boostorg/hana.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/align" > /dev/null;
+        git remote add upstream git@github.com:boostorg/align.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/algorithm" > /dev/null;
+        git remote add upstream git@github.com:boostorg/algorithm.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/any" > /dev/null;
+        git remote add upstream git@github.com:boostorg/any.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/assert" > /dev/null;
+        git remote add upstream git@github.com:boostorg/assert.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/atomic" > /dev/null;
+        git remote add upstream git@github.com:boostorg/atomic.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/static_assert" > /dev/null;
+        git remote add upstream git@github.com:boostorg/static_assert.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/bind" > /dev/null;
+        git remote add upstream git@github.com:boostorg/bind.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/beast" > /dev/null;
+        git remote add upstream git@github.com:boostorg/beast.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/bimap" > /dev/null;
+        git remote add upstream git@github.com:boostorg/bimap.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/callable_traits" > /dev/null;
+        git remote add upstream git@github.com:boostorg/callable_traits.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/chrono" > /dev/null;
+        git remote add upstream git@github.com:boostorg/chrono.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/circular_buffer" > /dev/null;
+        git remote add upstream git@github.com:boostorg/circular_buffer.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/cobalt" > /dev/null;
+        git remote add upstream git@github.com:boostorg/cobalt.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/core" > /dev/null;
+        git remote add upstream git@github.com:boostorg/core.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/compat" > /dev/null;
+        git remote add upstream git@github.com:boostorg/compat.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/concept_check" > /dev/null;
+        git remote add upstream git@github.com:boostorg/concept_check.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/container_hash" > /dev/null;
+        git remote add upstream git@github.com:boostorg/container_hash.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/context" > /dev/null;
+        git remote add upstream git@github.com:boostorg/context.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/conversion" > /dev/null;
+        git remote add upstream git@github.com:boostorg/conversion.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/container" > /dev/null;
+        git remote add upstream git@github.com:boostorg/container.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/crc" > /dev/null;
+        git remote add upstream git@github.com:boostorg/crc.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/date_time" > /dev/null;
+        git remote add upstream git@github.com:boostorg/date_time.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/detail" > /dev/null;
+        git remote add upstream git@github.com:boostorg/detail.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/describe" > /dev/null;
+        git remote add upstream git@github.com:boostorg/describe.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/dynamic_bitset" > /dev/null;
+        git remote add upstream git@github.com:boostorg/dynamic_bitset.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/endian" > /dev/null;
+        git remote add upstream git@github.com:boostorg/endian.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/exception" > /dev/null;
+        git remote add upstream git@github.com:boostorg/exception.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/mpl" > /dev/null;
+        git remote add upstream git@github.com:boostorg/mpl.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/mp11" > /dev/null;
+        git remote add upstream git@github.com:boostorg/mp11.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/multi_index" > /dev/null;
+        git remote add upstream git@github.com:boostorg/multi_index.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/multiprecision" > /dev/null;
+        git remote add upstream git@github.com:boostorg/multiprecision.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/mqtt5" > /dev/null;
+        git remote add upstream git@github.com:boostorg/mqtt5.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/math" > /dev/null;
+        git remote add upstream git@github.com:boostorg/math.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/move" > /dev/null;
+        git remote add upstream git@github.com:boostorg/move.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/numeric/conversion" > /dev/null;
+        git remote add upstream git@github.com:boostorg/numeric_conversion.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/optional" > /dev/null;
+        git remote add upstream git@github.com:boostorg/optional.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/parameter" > /dev/null;
+        git remote add upstream git@github.com:boostorg/parameter.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/phoenix" > /dev/null;
+        git remote add upstream git@github.com:boostorg/phoenix.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/pool" > /dev/null;
+        git remote add upstream git@github.com:boostorg/pool.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/proto" > /dev/null;
+        git remote add upstream git@github.com:boostorg/proto.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/python" > /dev/null;
+        git remote add upstream git@github.com:boostorg/python.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/preprocessor" > /dev/null;
+        git remote add upstream git@github.com:boostorg/preprocessor.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/predef" > /dev/null;
+        git remote add upstream git@github.com:boostorg/predef.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/property_map" > /dev/null;
+        git remote add upstream git@github.com:boostorg/property_map.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/property_tree" > /dev/null;
+        git remote add upstream git@github.com:boostorg/property_tree.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/ratio" > /dev/null;
+        git remote add upstream git@github.com:boostorg/ratio.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/random" > /dev/null;
+        git remote add upstream git@github.com:boostorg/random.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/range" > /dev/null;
+        git remote add upstream git@github.com:boostorg/range.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/regex" > /dev/null;
+        git remote add upstream git@github.com:boostorg/regex.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/serialization" > /dev/null;
+        git remote add upstream git@github.com:boostorg/serialization.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/smart_ptr" > /dev/null;
+        git remote add upstream git@github.com:boostorg/smart_ptr.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/spirit" > /dev/null;
+        git remote add upstream git@github.com:boostorg/spirit.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/stacktrace" > /dev/null;
+        git remote add upstream git@github.com:boostorg/stacktrace.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/static_string" > /dev/null;
+        git remote add upstream git@github.com:boostorg/static_string.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/system" > /dev/null;
+        git remote add upstream git@github.com:boostorg/system.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/thread" > /dev/null;
+        git remote add upstream git@github.com:boostorg/thread.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/throw_exception" > /dev/null;
+        git remote add upstream git@github.com:boostorg/throw_exception.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/tokenizer" > /dev/null;
+        git remote add upstream git@github.com:boostorg/tokenizer.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/tti" > /dev/null;
+        git remote add upstream git@github.com:boostorg/tti.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/type_traits" > /dev/null;
+        git remote add upstream git@github.com:boostorg/type_traits.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/tuple" > /dev/null;
+        git remote add upstream git@github.com:boostorg/tuple.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/type_index" > /dev/null;
+        git remote add upstream git@github.com:boostorg/type_index.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/typeof" > /dev/null;
+        git remote add upstream git@github.com:boostorg/typeof.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/uuid" > /dev/null;
+        git remote add upstream git@github.com:boostorg/uuid.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/utility" > /dev/null;
+        git remote add upstream git@github.com:boostorg/utility.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/variant" > /dev/null;
+        git remote add upstream git@github.com:boostorg/variant.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/variant2" > /dev/null;
+        git remote add upstream git@github.com:boostorg/variant2.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/winapi" > /dev/null;
+        git remote add upstream git@github.com:boostorg/winapi.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/xpressive" > /dev/null;
+        git remote add upstream git@github.com:boostorg/xpressive.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/io" > /dev/null;
+        git remote add upstream git@github.com:boostorg/io.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/integer" > /dev/null;
+        git remote add upstream git@github.com:boostorg/integer.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/intrusive" > /dev/null;
+        git remote add upstream git@github.com:boostorg/intrusive.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/iterator" > /dev/null;
+        git remote add upstream git@github.com:boostorg/iterator.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/lexical_cast" > /dev/null;
+        git remote add upstream git@github.com:boostorg/lexical_cast.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/lambda" > /dev/null;
+        git remote add upstream git@github.com:boostorg/lambda.git > /dev/null 2>&1;
+    popd > /dev/null;
+
+    pushd "${PRV_PROJECT_ROOT}/mirrors/boost/libs/lockfree" > /dev/null;
+        git remote add upstream git@github.com:boostorg/lockfree.git > /dev/null 2>&1;
+    popd > /dev/null;
+
 
 
     touch "${INIT_SENTINEL}";
