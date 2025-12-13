@@ -31,3 +31,6 @@
 [submodule "mirrors/boost"]
 	path = mirrors/boost
 	url = git@github.com:xorxororbad/mirror-boost.git
+[submodule "mirrors/botan"]
+	path = mirrors/botan
+	url = git@github.com:xorxororbad/mirror-botan.git

@@ -116,3 +116,17 @@ ExternalProject_Add(grout_boost
     BUILD_ALWAYS OFF
 )
 
+set(BOTAN_PREFIX ${CMAKE_BINARY_DIR}/botan)
+set(BOTAN_INSTALL ${BOTAN_PREFIX}/install)
+ExternalProject_Add(botan
+    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/mirrors/botan/
+    PREFIX ${BOTAN_PREFIX}
+    CONFIGURE_COMMAND <SOURCE_DIR>/configure --prefix=${BOTAN_INSTALL} \
+                                             --build-targets=static \
+                                             --disable-shared \
+                                             --with-debug-info
+    BUILD_COMMAND ${CMAKE_MAKE_PROGRAM}
+    INSTALL_COMMAND ${CMAKE_MAKE_PROGRAM} install
+    BUILD_ALWAYS OFF
+)
+
