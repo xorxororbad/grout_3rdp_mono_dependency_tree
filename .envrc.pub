@@ -3,6 +3,10 @@ INIT_SENTINEL="${PRV_PROJECT_ROOT}/.init.sentinel";
 if [ ! -f "${INIT_SENTINEL}" ]; then
     echo "Running init..";
 
+    pushd "${PRV_PROJECT_ROOT}/mirrors/botan" > /dev/null;
+        git remote add upstream git@github.com:randombit/botan.git > /dev/null 2>&1;
+    popd > /dev/null
+
     pushd "${PRV_PROJECT_ROOT}/mirrors/tracy" > /dev/null;
         git remote add upstream git@github.com:wolfpld/tracy.git > /dev/null 2>&1;
     popd > /dev/null
