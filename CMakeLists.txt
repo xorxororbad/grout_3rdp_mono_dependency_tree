@@ -43,6 +43,7 @@ ExternalProject_Add(miniaudio
     CMAKE_ARGS
         -DCMAKE_BUILD_TYPE=Release
         -DCMAKE_INSTALL_PREFIX=${EXT_INSTALL_PREFIX}
+        -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
     BUILD_ALWAYS OFF
 )
 
@@ -51,6 +52,7 @@ ExternalProject_Add(sdl
     CMAKE_ARGS
         -DCMAKE_BUILD_TYPE=Release
         -DCMAKE_INSTALL_PREFIX=${EXT_INSTALL_PREFIX}
+        -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
     BUILD_ALWAYS OFF
 )
 
@@ -59,6 +61,7 @@ ExternalProject_Add(tracy
     CMAKE_ARGS
         -DCMAKE_BUILD_TYPE=Release
         -DCMAKE_INSTALL_PREFIX=${EXT_INSTALL_PREFIX}
+        -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
     BUILD_ALWAYS OFF
 )
 
@@ -67,6 +70,7 @@ ExternalProject_Add(googletest
     CMAKE_ARGS
         -DCMAKE_BUILD_TYPE=Release
         -DCMAKE_INSTALL_PREFIX=${EXT_INSTALL_PREFIX}
+        -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
     BUILD_ALWAYS OFF
 )
 
@@ -77,6 +81,7 @@ ExternalProject_Add(googlebenchmark
         -DCMAKE_INSTALL_PREFIX=${EXT_INSTALL_PREFIX}
         -DBENCHMARK_ENABLE_GTEST_TESTS=OFF
         -DBENCHMARK_ENABLE_TESTING=OFF
+        -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
     BUILD_ALWAYS OFF
 )
 
@@ -85,6 +90,7 @@ ExternalProject_Add(grout_zstd
     CMAKE_ARGS
         -DCMAKE_BUILD_TYPE=Release
         -DCMAKE_INSTALL_PREFIX=${EXT_INSTALL_PREFIX}
+        -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
     BUILD_ALWAYS OFF
 )
 
@@ -93,6 +99,7 @@ ExternalProject_Add(jsoncpp
     CMAKE_ARGS
         -DCMAKE_BUILD_TYPE=Release
         -DCMAKE_INSTALL_PREFIX=${EXT_INSTALL_PREFIX}
+        -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
     BUILD_ALWAYS OFF
 )
 
@@ -101,6 +108,7 @@ ExternalProject_Add(tracy_profiler
     CMAKE_ARGS
         -DCMAKE_BUILD_TYPE=Release
         -DCMAKE_INSTALL_PREFIX=${EXT_INSTALL_PREFIX}
+        -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
     BUILD_ALWAYS OFF
 )
 
@@ -113,6 +121,7 @@ ExternalProject_Add(grout_boost
         -DBOOST_BUILD_FILESYSTEM=ON
         -DBoost_VERBOSE=1
         -DBOOST_ENABLE_PYTHON=ON
+        -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
     BUILD_ALWAYS OFF
 )
 
@@ -126,7 +135,8 @@ ExternalProject_Add(botan
                              --build-targets=static
                              --disable-shared
                              --with-debug-info
-    BUILD_COMMAND make
+    BUILD_COMMAND intercept-build make
+
     INSTALL_COMMAND make install
     BUILD_ALWAYS OFF
 )
